@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     public CharacterController controller;
-    public float playerSpeed = 6.0f;            //  Speed of the player movement
+    public float playerSpeed = 7.0f;            //  Speed of the player movement
     public float jumpForce = 10.0f;              //  Force of the player jumping
     [Tooltip("Fall velocity when the player is on a slope")]
     public float fallSlopeVelocity = 8f;      //  Slope fall velocity affected too by the gravity

@@ -17429,7 +17429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6894042225348091549, guid: 126cd0bc68042594b8bed606c574571f, type: 3}
       propertyPath: playerSpeed
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6894042225348091549, guid: 126cd0bc68042594b8bed606c574571f, type: 3}
       propertyPath: fallSlopeVelocity
