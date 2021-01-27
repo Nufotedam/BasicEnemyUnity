@@ -4,8 +4,9 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     public CharacterController controller;
-    public float playerSpeed = 7.0f;            //  Speed of the player movement
-    public float jumpForce = 10.0f;              //  Force of the player jumping
+    public float playerSpeed = 7.0f;                //  Speed of the player movement
+    public float jumpForce = 10.0f;                 //  Force of the player jumping
+    public float stepDown = 30.0f;                  //  Force applied to the player when falling without jumping
     [Tooltip("Fall velocity when the player is on a slope")]
     public float fallSlopeVelocity = 8f;      //  Slope fall velocity affected too by the gravity
     [Tooltip("Force in the Y-axis when the player in on a slope")]
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     float m_Speed;              //  Speed of the player, this changes if the player run
     float m_Gravity = 20.0f;    //  Gravity
     float m_FallVelocity;       //  Variable that saves and applies gravity to the player
+    bool m_IsJump;              //  Control if the player has jumped
     //  Slope variables
     bool m_OnSlope = false;     //  If the player is on a slope
     Vector3 m_HitNormal;        //  Get the normal of a plane
@@ -54,8 +56,14 @@ public class PlayerMovement : MonoBehaviour
         Gravity();
         Jump();
 
+        if (controller.isGrounded && !m_IsJump)
+        {
+            m_PlayerMovement = m_PlayerMovement + Vector3.down * stepDown;      //  Apply more force when the player fall
+        }
+
         controller.Move(m_PlayerMovement * Time.deltaTime);                 //  Move the player using the character controller
         //Debug.Log(controller.velocity.magnitude);
+        m_IsJump = !controller.isGrounded;
 
         if (isMove)
         {
@@ -133,6 +141,7 @@ public class PlayerMovement : MonoBehaviour
          * */
         if (controller.isGrounded && Input.GetButtonDown("Jump"))
         {
+            m_IsJump = true;
             m_FallVelocity = jumpForce;                 //  Set the fall velocity when the player jump with the jump force to be able to the player goes up
             m_PlayerMovement.y = m_FallVelocity;
             m_Animator.SetTrigger("Jump");              //  Set the trigger in the animator to jump

@@ -2324,7 +2324,7 @@ Transform:
   - {fileID: 1931904421}
   - {fileID: 498230622}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681664154
 GameObject:
@@ -7885,7 +7885,7 @@ RectTransform:
   - {fileID: 1362307790}
   - {fileID: 1759197241}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -16678,7 +16678,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2066972105
 GameObject:
@@ -17456,6 +17456,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[2]
       value: 
       objectReference: {fileID: 1071021147}
+    - target: {fileID: 6969078303729978859, guid: 6b3c26f0b9776c54e8df18e8fb60fa27, type: 3}
+      propertyPath: m_Acceleration
+      value: 380
+      objectReference: {fileID: 0}
     - target: {fileID: 7439272267555039748, guid: 6b3c26f0b9776c54e8df18e8fb60fa27, type: 3}
       propertyPath: m_RootOrder
       value: 8
