@@ -17444,6 +17444,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6452192347599270348, guid: 6b3c26f0b9776c54e8df18e8fb60fa27, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f75ce9bff2c618643a72441b63494258, type: 2}
+    - target: {fileID: 6452192347599270348, guid: 6b3c26f0b9776c54e8df18e8fb60fa27, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6e4acc0c022ea7448851bb80f40f191d, type: 2}
     - target: {fileID: 6969078303729978858, guid: 6b3c26f0b9776c54e8df18e8fb60fa27, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
